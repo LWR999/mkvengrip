@@ -47,7 +47,7 @@ while IFS= read -r line; do
     section_id=$((section_id - 1))
   elif [[ $line == "|  + Track type: "* ]]; then
     section_type=${line#"|  + Track type: "}
-  elif [[ $line == "|  + Language: "* ]]; then
+  elif [[ $line == line#"|  + Language (IETF BCP 47): "* ]]; then
     if [[ $line != "|  + Language (IETF BCP 47): en"* ]]; then
       section_language=${line#"|  + Language (IETF BCP 47): "}
     fi
