@@ -51,7 +51,7 @@ while IFS= read -r line; do
   elif [[ $line == "|  + Track type: "* ]]; then
     section_type=${line#"|  + Track type: "}
   elif [[ $line == "|  + Language: "* ]]; then
-    if [[ $line != "|  + Language: eng"* && $line != "|  + Language: und"* && $line != "|  + Language: en-US"* && $line != "|  + Language: en-GB"*]]; then
+    if [[ $line != "|  + Language: eng"* && $line != "|  + Language: und"* && $line != "|  + Language: en-US"* && $line != "|  + Language: en-GB"* ]]; then
       section_language=${line#"|  + Language: "}
     fi
     if [[ $section_type == "audio" ]]; then
